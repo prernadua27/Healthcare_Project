@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    {{>header}}
+    <a href="/user"><h2>Redirect to User List</h2></a>
+    <h1>Welcome, {{username}}!</h1>
+    <p>Age: {{age}}</p>
+    <div>
+       <form action="/profile" method="post" enctype="multipart/form-data">
+        <input type="file" name="avatar" />
+        <input type="submit" value="Upload">
+        </form>
+    </div>
+
+    {{#if imageUrl}}
+        <div>
+            <h2>Your Uploaded Image</h2>
+            <img src="{{imageUrl}}" alt="Uploaded Avatar" style="max-width: 200px;">
+        </div>
+    {{/if}}
+
+</body>
+</html>

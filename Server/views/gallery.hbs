@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1>Uploaded Images</h1>
+    <div style="display: flex; flex-wrap: wrap;">
+        {{#each images}}
+            <div style="margin: 10px;">
+                <img src="{{this}}" alt="Uploaded Image" style="width: 150px; height: auto;"/>
+            </div>
+        {{/each}}
+    </div>
+</body>
+</html>
